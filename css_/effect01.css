@@ -1,0 +1,618 @@
+/*===========================  Outline  ================================
+1. Flooeplan Demos
+
+2. Box Shadow Effects
+  class = effect 1, 2, 6, 7, 8
+
+3. Text Effects
+   class = ._text-neon-blue
+
+4. Native Android UI
+   .message .info .success .warning . error
+
+5. Folded Corner 
+   .note .corner .red . 
+
+6. Rounded Button
+   ._round-btn.green
+=======================================================================*/
+
+.box {
+  font-family: Arial, Helvetical;
+  padding: 10px;
+  color: white;
+  font-weight:bold;
+  position:relative;
+  float:left;
+  margin: 5px;
+  font-size:1em;
+  text-align:center;
+  vertical-align:middle;
+  width: 100px;
+  height: 100px;
+line-height: 100px
+}
+
+body{   font-family: Arial, Helvetical;    }
+
+/************************************************************
+ *                    Floorplan Demos
+ ************************************************************/        
+._toolbar40{
+  width: 80%;     
+  height: 40px;      /*vertical align*/
+  line-height: 40px; /*vertical align*/
+  text-align:center;
+  vertical-align:middle;
+  margin:0 auto;
+}
+
+._toolbar120{
+  width: 80%;     
+  height: 120px;      /*vertical align*/
+  line-height: 120px; /*vertical align*/
+  text-align:center;
+  vertical-align:middle;
+  margin:0 auto;
+}
+
+._cell{
+  width: 120px;   
+  height: 40px;
+  line-height:40px;
+  font-size:15px;
+  background:pink;
+  border:2px solid gray;  
+  margin: 0 auto;    
+}
+
+._blue      { background:blue;      color:white;  }
+._steelblue { background:steelblue; color:white;  }
+._pink      { background:pink;      color:white;  }
+
+._inline-block{
+  margin:0 40px;        
+  display:inline-block;
+}
+
+._inline{
+  margin:0 40px;        
+  display:inline;
+}
+
+._flowUp{     
+  margin:-22px auto;  
+  z-index:10000;     
+  position:relative;
+ 
+  text-align:center;
+  vertical-align:middle;  
+  height: 40px;      /*vertical align*/
+  line-height: 40px; /*vertical align*/     
+}                                  
+
+
+/*****************************************************************************
+ *                  Box-shadow Effects
+ *  http://www.paulund.co.uk/playground/demo/css_box_shadow/
+ *  http://studentwebhosting.com/tutorials/amazing-css3-box-shadow-examples/
+ *****************************************************************************/
+.effect2
+/*,.swiper-slide */
+,.B6
+{
+  position: relative; /*  width: 90%;            */
+}
+.effect2:before, .effect2:after/*,     
+.swiper-slide:before,
+.swiper-slide:after        */
+,.B6:after,.B6:before
+{
+  z-index: -100;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.effect2:after,.B6:after/*,
+.swiper-slide:after        
+*/  
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+/*==================================================
+ * Effect 1 - bottom only
+ * horizontal vertical blur spread color inset
+ * ===============================================*/
+.effect1{
+/*
+	-webkit-box-shadow: 0 10px 6px -6px #777;
+	   -moz-box-shadow: 0 10px 6px -6px #777;
+	        box-shadow: 0 10px 6px -6px #777;    
+*/ 
+  box-shadow: 0 10px 1px -6px rgba(227,7,7,0.5) ,0 20px 1px -12px rgba(7,227,7,0.5);    
+}
+
+/*==================================================
+ * Effect 2
+ * ===============================================*/
+.effect2
+{ position: relative; }
+.effect2:before, .effect2:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 15px 10px #777;
+  -moz-box-shadow: 0 15px 10px #777;
+  box-shadow: 0 15px 10px #777;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.effect2:after
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+
+/*==================================================
+ * Effect 6 - Down only
+ * ===============================================*/
+.effect6
+{
+  	position:relative;       
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+/*
+.effect6:before, .effect6:after
+{
+	content:"";
+    position:absolute; 
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:50%;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+} 
+.effect6:after
+{
+	right:10px; 
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg); 
+       -moz-transform:skew(8deg) rotate(3deg);     
+        -ms-transform:skew(8deg) rotate(3deg);     
+         -o-transform:skew(8deg) rotate(3deg); 
+            transform:skew(8deg) rotate(3deg);
+}
+*/
+/*==================================================
+ * Effect 7 - Up & Down
+ * ===============================================*/
+.effect7
+{
+  	position:relative;       
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect7:before, .effect7:after
+{
+	content:"";
+    position:absolute; 
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:0;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+} 
+.effect7:after
+{
+	right:10px; 
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg); 
+       -moz-transform:skew(8deg) rotate(3deg);     
+        -ms-transform:skew(8deg) rotate(3deg);     
+         -o-transform:skew(8deg) rotate(3deg); 
+            transform:skew(8deg) rotate(3deg);
+}
+
+/*==================================================
+ * Effect 8 - Left & Right
+ * ===============================================*/
+.effect8
+{
+  	position:relative;       
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect8:before, .effect8:after
+{
+	content:"";
+    position:absolute; 
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+} 
+.effect8:after
+{
+	right:10px; 
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg); 
+       -moz-transform:skew(8deg) rotate(3deg);     
+        -ms-transform:skew(8deg) rotate(3deg);     
+         -o-transform:skew(8deg) rotate(3deg); 
+            transform:skew(8deg) rotate(3deg);
+}
+
+/********************************************************************
+ *                          Text Effects
+ *  http://red-team-design.com/wp-content/uploads/2009/12/demo.html            
+ ********************************************************************/
+
+._text-carved-dark
+{
+  color:#222222;
+
+  font-size: 35px;
+  font-weight:bold;
+  text-align:center;
+  text-shadow: 0 1px 0 #777777;
+}
+
+._text-flowUp
+{
+  color:#777777;
+
+  font-size: 35px;
+  font-weight:bold;
+  text-align:center;
+  text-shadow: 0 1px 4px #121212;
+}
+  
+._text-carved-light
+{
+  color:#3e3e3e;
+
+  font-size: 35px;
+  font-weight:bold;
+  text-align:center;
+  text-shadow: 1px 1px #777777, -1px -1px #000000;
+}
+
+._text-outline
+{
+  color:#eaeaea;
+
+  font-size: 15px;
+  font-weight:bold;
+  text-align:center;
+  text-shadow: -3px 0 #171717, 0 3px #171717, 3px 0 #171717, 0 -3px #171717;
+}
+
+._text-neon-blue  /* #db6969 */
+{
+  color: #fff;
+  margin:25px 0;
+  font-size: 1em;
+  font-weight:bold;
+  text-align:center;
+  text-shadow: 0 0 24px #3498d8, 0 0 1.2em #3498ff;
+} 
+
+
+/********************************************************************
+ *                  Native Android Effects
+ *  http://red-team-design.com/wp-content/uploads/2009/12/demo.html            
+ ********************************************************************/
+
+@-webkit-keyframes messagepop {
+	0% {
+		-webkit-transform: scale(1,1);
+	}
+	50% {
+		-webkit-transform: scale(1.4,1.4);
+	}
+	100% {
+		-webkit-transform: scale(1,1);
+	}
+}
+@-moz-keyframes messagepop {
+	0% {
+		-moz-transform: scale(1,1);
+	}
+	50% {
+		-moz-transform: scale(1.4,1.4);
+	}
+	100% {
+		-moz-transform: scale(1,1);
+	}
+}
+@-o-keyframes messagepop {
+	0% {
+		-o-transform: scale(1,1);
+	}
+	50% {
+		-o-transform: scale(1.4,1.4);
+	}
+	100% {
+		-o-transform: scale(1,1);
+	}
+}
+@-ms-keyframes messagepop {
+	0% {
+		-ms-transform: scale(1,1);
+	}
+	50% {
+		-ms-transform: scale(1.4,1.4);
+	}
+	100% {
+		-ms-transform: scale(1,1);
+	}
+}
+@keyframes messagepop {
+	0% {
+		transform: scale(1,1);
+	}
+	50% {
+		transform: scale(1.4,1.4);
+	}
+	100% {
+		transform: scale(1,1);
+	}
+}
+.message {
+	clear: both;
+	padding: 7px 7px 7px 75px;
+	min-height: 45px;
+	margin: 7px 0;
+	text-shadow: 0px 0px 0px rgba(0,0,0,0.2);
+	position: relative;    /* */
+}
+
+.message i {
+	display: block;
+	position: absolute;
+	left: 7px;
+	top: 7px;
+	height: 100%;
+	font-size: 45px;
+	line-height: 45px;
+	width: 65px;
+	text-align: center;
+	-webkit-animation: messagepop 1s 2;
+	-moz-animation: messagepop 1s 2;
+	-o-animation: messagepop 1s 2;
+	-ms-animation: messagepop 1s 2;
+	animation: messagepop 1s 2;
+	animation-delay: 1s;
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay: 1s;
+	-o-animation-delay: 1s;
+	-ms-animation-delay: 1s;
+}
+
+.message.error {
+	background-color: #FF7979;
+}
+
+.message.warning {
+	background-color: #FFD060;
+}
+
+.message.success {
+	background-color: #B6DB49;
+}
+
+.message.info {
+	background-color: #6DCAEC;
+}
+
+.message a {
+	color: #404040 !important;
+	text-decoration: underline;
+}
+
+/********************************************************************
+ *                     Folded Corner Effects
+ *  http://nicolasgallagher.com/pure-css-folded-corner-effect/demo/           
+ ********************************************************************/    
+._note {
+    position:relative;    /* for folded corner*/
+    width:90%;
+    padding:1em 1.5em;
+    margin:0 auto;
+    color:#fff;
+    background:#97C02F;
+    overflow:hidden;
+}
+
+._note:before {
+    content:"";
+    position:absolute;
+    top:0;
+    right:0;
+    border-width:0 16px 16px 0; /* This trick side-steps a webkit bug */
+    border-style:solid;
+    border-color:#fff #fff #658E15 #658E15; /* A bit more verbose to work with .rounded too */
+    background:#658E15; /* For when also applying a border-radius */
+    display:block; width:0; /* Only for Firefox 3.0 damage limitation */
+    /* Optional: shadow */
+    -webkit-box-shadow:0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow:0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+    box-shadow:0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2);
+}
+
+._note.red {background:#C93213;}
+._note.red:before {border-color:#fff #fff #97010A #97010A; background:#97010A;}
+
+._note.blue {background:#53A3B4;}
+._note.blue:before {border-color:#fff #fff transparent transparent; background:transparent;}
+
+._note.taupe {background:#999868;}
+._note.taupe:before {border-color:#fff #fff #BDBB8B #BDBB8B; background:#BDBB8B;}
+
+._note.rounded {
+  -webkit-border-radius:5px 0 5px 5px;
+  -moz-border-radius:5px 0 5px 5px;
+  border-radius:5px 0 5px 5px;
+}
+
+._note.rounded:before {
+  border-width:8px; /* Triggers a 1px 'step' along the diagonal in Safari 5 (and Chrome 10) */
+  border-color:#fff #fff transparent transparent; /* Avoids the 1px 'step' in webkit. Background colour shows through */
+  -webkit-border-bottom-left-radius:5px;
+  -moz-border-radius:0 0 0 5px;
+  border-radius:0 0 0 5px;
+}
+
+/******************************************************************************
+ *                     Rounded Button Effects
+ *            http://codepen.io/yesilfasulye/pen/iGHru  
+ * http://www.sanwebe.com/2014/02/css3-buttons-examples-with-effects-animations         
+ ******************************************************************************/   
+
+._round-btn{
+	background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
+	background-image: linear-gradient(top, #f4f1ee, #fff);
+	border-radius: 50%;
+	box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, .3), inset 0px 2px 1px 1px white, inset 0px -2px 1px 1px rgba(204,198,197,.5);
+	float:left;
+	height: 40px;
+  line-height:40px;    
+	width: 40px;
+	font-size: 20px;  			
+	-webkit-transition: all .1s linear;
+	transition: all .1s linear;
+
+  text-decoration:none;
+  vertical-align:middle;
+  text-align:center;         
+	color:#e9e6e4;                            
+	text-shadow: 0px -1px 1px #bdb5b4, 1px 1px 1px white;
+  margin:0 10px;
+
+  bottom:0;
+  position: relative;
+}
+
+._round-btn:hover{
+	background-image: -webkit-linear-gradient(top, #fff, #f4f1ee);
+	background-image: linear-gradient(top, #fff, #f4f1ee);
+	color:#f94e66;
+	text-shadow:0px 0px 6px #f94e66;
+  cursor:pointer; 
+
+	height: 60px;
+  line-height:60px;    
+	width: 60px;     
+}
+
+._round-btn:active{
+	background-image: -webkit-linear-gradient(top, #efedec, #f7f4f4);
+	background-image: linear-gradient(top, #efedec, #f7f4f4);
+	box-shadow: 0 3px 5px 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5);
+/*
+	color:#dbd2d2;
+	text-shadow: 0px -1px 1px #bdb5b4, 0px 1px 1px white;
+*/
+}
+._round-btn.red:hover {
+	color:#f94e66;
+	text-shadow:0px 0px 6px #f94e66;
+}
+._round-btn.green:hover {
+	color:#83d244;
+	text-shadow:0px 0px 6px #83d244;
+}
+ 
+
+
+/************************** other beautiful icons ******************************   
+
+http://www.hongkiat.com/blog/css3-button-tutorials/ ; // overview
+
+// white rounded
+http://azmind.com/demo/css3-circle-social-buttons/
+http://azmind.com/demo/css3-circle-social-buttons/
+
+// silver white
+http://codepen.io/pedox/pen/Kfzso   
+
+// button with icons
+http://red-team-design.com/wp-content/uploads/2011/09/awesome-css3-buttons.html 
+
+******************************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+/*
+  Color templete
+http://nathanspeller.com/color-pickers/
+http://nathanspeller.com/color-pickers/
+
+google templete
+flat-ui
+
+*/
+
+

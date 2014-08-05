@@ -1,0 +1,78 @@
+/******************************************************************************
+The CSS classes for the chart labels are:
+
+Title: .dygraph-label.dygraph-title
+x-axis label: .dygraph-label.dygraph-xlabel
+y-axis label: .dygraph-label.dygraph-ylabel
+y2-axis label: .dygraph-label.dygraph-y2label
+
+The axis labels also get CSS classes:
+"2000", "4000", "6000", … for the y-axis and  
+"1920", "1930", "1940", … for the x-axis
+
+x-axis: .dygraph-axis-label.dygraph-axis-label-x
+y-axis: .dygraph-axis-label.dygraph-axis-label-y
+y2-axis: .dygraph-axis-label.dygraph-axis-label-y.dygraph-axis-label-y2
+
+The legend has the .dygraph-legend class. When using highlightSeriesOpts, 
+the selected series' <span> gets a .highlight class. 
+This can be used to show only a single series in the legend.
+ * http://dygraphs.com/css.html
+*******************************************************************************/
+
+
+/******************************************************************************
+ * Labels on the X & Y axes:  
+ * http://dygraphs.com/css.html
+*******************************************************************************/
+.dygraph-axis-label     {}
+  .dygraph-axis-label-x   {}
+  .dygraph-axis-label-y   {}
+  .dygraph-axis-label-y2  {}
+
+
+/******************************************************************************
+ * Chart labels 
+ * http://dygraphs.com/tests/styled-chart-labels.html
+*******************************************************************************/
+.dygraph-label    {}
+  .dygraph-title    { color: gray; font-size:16px; font-weight:bold; }
+  .dygraph-xlabel   {}
+  .dygraph-ylabel   {}
+  .dygraph-y2label  {}
+                                       
+/******************************************************************************
+ * The legend
+ * http://dygraphs.com/tests/series-highlight.html
+******************************************************************************/
+.dygraph-legend {}
+.dygraph-legend span:nth-child(2) { /*  display:none; */  }   
+.dygraph-legend span { 
+  padding:2px;/*  margin: 5px;   */
+  margin:3px;
+}
+.dygraph-legend span.highlight {
+  /*    
+    border: 1px solid gray;       
+    border-width: 0 0 1px 1px;
+    text-shadow: 1px 1px 1px 1px rgb(50,100,250);
+    margin: 5px;
+    
+    text-shadow: 0 0 24px #3498d8, 0 0 1.2em #3498ff;
+    color:#fff;  
+    padding:10px; 
+  */                 
+    font-weight: bold;
+    font-size: 1em;
+
+     
+}                         
+ 
+.dygraph-legend > span            { /*display: none; */   }      
+.dygraph-legend > span.highlight  { /*display: inline; */ }   
+
+.all, canvas {  margin: 0px auto; }
+
+
+
+
